@@ -5,6 +5,7 @@
 /backend/node_modules
 backend/package-lock.json
 frontend/package-lock.json
+package-lock.json
 /frontend/static
 /frontend/build
 /.pnp
