@@ -18,7 +18,7 @@ const dbName = process.env.DB_NAME;
 
 const serverHost = process.env.SERVER_HOST;
 
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/1kbW0Pikfe53vYxjaJSZfjb8WESh9x3litGVqnkNU-n0/edit?gid=0#gid=0'; // 'https://docs.google.com/spreadsheets/d/1aQF-7tfFYjKxg4Und36zwpilFxz3UgtzJZsBV5jSyII/edit#gid=0';
+const sheetUrl = 'https://docs.google.com/spreadsheets/d/1aQF-7tfFYjKxg4Und36zwpilFxz3UgtzJZsBV5jSyII/edit#gid=0';
 
 const client = new Client({
     user: dbUser,
