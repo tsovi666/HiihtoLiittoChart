@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const schedule = require('node-schedule');
-const { Client } = require('node-postgres');
+const { Client } = require('pg');
 const XLSX = require("xlsx");
 const axios = require('axios');
 const app = express();
@@ -29,6 +29,9 @@ const client = new Client({
 });
 
 (async () => {
+    console.log('Connecting to database');
+    console.log(dbHost);
+    console.log(dbPort);
     await client.connect();
     console.log('Database connected');
 })().catch(console.error);

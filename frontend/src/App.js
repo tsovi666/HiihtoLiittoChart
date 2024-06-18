@@ -158,8 +158,11 @@ function App() {
   useEffect(() => {
     const handleFetchFromUrl = async () => {
       try {
-        const dataUrl = process.env.DATA_BASEURL;
-        const response = await axios.get(`${dataUrl}/data`);
+        const dataUrl = process.env.REACT_APP_DATA_BASEURL;
+        console.log(process.env);
+        console.log('dadaa');
+        console.log(dataUrl);
+        const response = await axios.get(`/api/data`);
         const parsedData = [[epoch.getTime(), 0]].concat(parseResponse(response.data));
 
         setEquity(getEquity(response.data));
