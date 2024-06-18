@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-content {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.data-content-wrapper {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.data-content {
+  float: left;
+  width: 31%;
+  padding: 1rem;
+}
+
+.data-content h2 {
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.data-content-part {
+  padding: 1rem;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+}
+
+.data-tableheader {
+  overflow: auto;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+}
+
+.data-content-part h3 {
+  display: inline-block;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.data-content-part h3:after {
+  content: ':';
+}
+
+.data-content h4 {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.data-content h5 {
+  display: inline;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.data-content-part p {
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.data-tableheader h3 {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.data-tableheader h3.invested {
+  float: right;
+}
+
+.data-content-part p.invested-amount {
+  float: right;
+  color: green;
+  font-weight: bold;
+}
+
+.holder-wrapper {
+  overflow: auto;
+}
+
+.data-content-part span {
+  font-weight: bold;
+  float: right;
+}
+
+.positive {
+  color: green;
+}
+
+.percentage .positive:before {
+  content: "+";
+}
+
+.negative {
+  color: red;
+}
+
+.percentage .negative:before {
+  content: "-";
+}
+
+.lang-selector {
+  float: right;
+}
+
+.lang-selector button {
+  border: 0;
+  background: none;
+  margin: 0.5rem;
+  padding: 0;
+  vertical-align: top;
+}
+
+.lang-selector img {
+  max-width: 24px;
+}
+
+.lang-selector button:hover {
+  cursor: pointer;
+  border-bottom: #aaa solid 2px;
+}
+
+.lang-selector button.active {
+  border-bottom: #aaa solid 2px;
+}
