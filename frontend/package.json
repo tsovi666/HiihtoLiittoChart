@@ -1,6 +1,6 @@
 {
   "name": "HiihtoLiittoChart",
-  "homepage": "https://tsovi666.github.io/HiihtoLiittoChart/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,16 +9,12 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
-    "gh-pages": "^6.1.1",
-    "googleapis": "^140.0.0",
     "highcharts": "^11.4.3",
     "highcharts-react-official": "^3.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "use-google-sheets": "^2.0.0",
-    "web-vitals": "^2.1.4",
-    "xlsx": "^0.18.5"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "npm run build:messages && react-scripts start",

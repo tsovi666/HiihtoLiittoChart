@@ -1,8 +1,8 @@
 
 export default {
   de: {
-    title: function(d) { return "Hiihtoliiton Scheisse Index 1941"; },
-    performance: function(d) { return "Hiihtoliiton ist ein Market Reich"; },
+    title: function(d) { return "Hiihtoliitto Scheisse Index 1941"; },
+    performance: function(d) { return "Arbeit Macht Frei"; },
     valuation: function(d) { return "Blitzkrieg"; },
     shareholders: function(d) { return "Übermensch"; },
     equity: function(d) { return "Endsieg"; },
@@ -39,7 +39,7 @@ export default {
     valuation: function(d) { return "Valuaatiå"; },
     shareholders: function(d) { return "Åsakkeenåmistajat"; },
     equity: function(d) { return "Pääåma"; },
-    name: function(d) { return "Nimi"; },
+    name: function(d) { return "Håmå"; },
     invested: function(d) { return "Sijåitettu"; },
     months: function(d) { return "Kuukautta"; },
     month: function(d) { return "Kuukausi"; }

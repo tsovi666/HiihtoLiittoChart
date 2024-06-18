@@ -1,0 +1,78 @@
+services: 
+  backend:
+    build: 
+      context: backend
+    container_name: backend
+    working_dir: /usr/src/app
+    networks: 
+      - node-network
+    tty: true
+    ports: 
+      - "3003:3003"
+    command: node server.js
+    depends_on:
+       db:
+        condition: service_healthy
+    environment:
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PORT=5432
+      - DB_PASS=postgres
+      - DB_NAME=postgres
+      - SERVER_HOST=backend
+
+  frontend:
+    build: 
+      context: frontend
+    container_name: frontend
+    working_dir: /usr/src/app
+    networks: 
+      - node-network
+    volumes: 
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    tty: true
+    ports: 
+      - "3000:3000"
+    command: npm run start
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_DATA_BASEURL=backend
+
+  db:
+    image: postgres:16.3
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    container_name: db
+    restart: always
+    tty: true
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment: 
+      - POSTGRES_PASSWORD=postgres
+    ports: 
+      - "5432:5432"
+    networks: 
+      - node-network
+
+  nginx:
+    build: 
+      context: nginx
+    container_name: nginx
+    restart: always
+    tty: true
+    ports: 
+      - "8000:80"
+    networks: 
+      - node-network
+    depends_on:
+      - frontend
+      - backend
+  
+networks: 
+  node-network:
+    driver: bridge

@@ -3,8 +3,10 @@
 # dependencies
 /frontend/node_modules
 /backend/node_modules
-/backend/package-lock.json
-/frontend/package-lock.json
+backend/package-lock.json
+frontend/package-lock.json
+/frontend/static
+/frontend/build
 /.pnp
 .pnp.js
 
