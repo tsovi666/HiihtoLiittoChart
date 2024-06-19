@@ -26,7 +26,7 @@ code {
 .data-content {
   float: left;
   width: 31%;
-  padding: 1rem;
+  padding: 1vmin;
 }
 
 .data-content h2 {
@@ -146,3 +146,37 @@ code {
 .lang-selector button.active {
   border-bottom: #aaa solid 2px;
 }
+
+
+@media screen and (min-width:250px) and (max-width:480px) {
+  .data-content {
+    width: 100%;
+  }
+
+  .header > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .header .lang-selector {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    float: none;
+  }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+  .data-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .data-content {
+    width: 100%;
+  }
+}
+
