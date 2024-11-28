@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const schedule = require('node-schedule');
+const { Cron } = require("croner");
 const { Client } = require('pg');
 const XLSX = require("xlsx");
 const axios = require('axios');
@@ -110,11 +110,12 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 });
 
-const job = schedule.scheduleJob('* / 20 * * * *', async () => {
+const job = new Cron('*/5 * * * *', async () => {
+    console.log('Time to do the job again!');
     const sheet = await getSheet();
     const changed = await sheetChanged(sheet);
 });
 
 app.listen(backendPort, () => {
-    console.log(`Server running on http://${serverHost}:${backendPort}`);
+    console.log(`Server paska running on http://${serverHost}:${backendPort}`);
 });
